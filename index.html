@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Romantic</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#160c24;color:white;
+ font-family:Arial,sans-serif;
+}
+header{
+ padding:20px;background:#29123d;
+ display:flex;justify-content:space-between;
+ align-items:center;
+}
+.logo{font-size:23px;font-weight:bold;color:#ff79bd}
+button{
+ border:0;border-radius:20px;padding:12px 17px;
+ background:#ed3997;color:white;font-weight:bold;
+}
+nav{
+ display:flex;justify-content:space-around;
+ padding:14px 4px;background:#241132;
+ position:sticky;top:0;
+}
+nav a{color:white;text-decoration:none;font-size:12px}
+.container{padding:17px}
+h2{color:#ff82c4}
+.card{
+ background:#2c1940;border-radius:17px;
+ padding:17px;margin-bottom:15px;
+ border:1px solid #58315f;
+}
+.room{
+ display:inline-block;background:#44234f;
+ padding:13px;border-radius:12px;
+ margin:5px;text-align:center;
+}
+.rooms{display:flex;flex-wrap:wrap}
+input{
+ width:100%;padding:13px;border-radius:10px;
+ border:0;margin:8px 0;
+}
+footer{
+ text-align:center;padding:20px;color:#d5b5d9;
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">❤️ Love Romantic</div>
+ <button onclick="alert('Notifications')">🔔</button>
+</header>
+
+<nav>
+ <a href="#home">Home</a>
+ <a href="#live">Live</a>
+ <a href="#video">Video Room</a>
+ <a href="#audio">Audio Room</a>
+ <a href="#profile">Profile</a>
+</nav>
+
+<div class="container" id="home">
+ <h2>Welcome to Love Romantic ❤️</h2>
+ <p>Make Friends • Share Love • Enjoy Together</p>
+
+ <div class="card" id="live">
+  <h2>🔴 Live Video</h2>
+  <p>Watch live broadcasts and chat with people.</p>
+  <button onclick="alert('Live streaming will be connected soon!')">
+   Watch Live
+  </button>
+  <button onclick="alert('Live streaming setup coming soon!')">
+   Go Live
+  </button>
+ </div>
+
+ <div class="card" id="video">
+  <h2>📹 Video Rooms</h2>
+  <p>Choose your video room size.</p>
+  <div class="rooms">
+   <div class="room">4 Seats<br><button onclick="joinRoom(4,'Video')">Join</button></div>
+   <div class="room">6 Seats<br><button onclick="joinRoom(6,'Video')">Join</button></div>
+   <div class="room">9 Seats<br><button onclick="joinRoom(9,'Video')">Join</button></div>
+   <div class="room">12 Seats<br><button onclick="joinRoom(12,'Video')">Join</button></div>
+  </div>
+ </div>
+
+ <div class="card" id="audio">
+  <h2>🎙️ Audio Rooms</h2>
+  <p>Talk with friends in audio rooms.</p>
+  <div class="rooms">
+   <div class="room">4 Seats<br><button onclick="joinRoom(4,'Audio')">Join</button></div>
+   <div class="room">6 Seats<br><button onclick="joinRoom(6,'Audio')">Join</button></div>
+   <div class="room">9 Seats<br><button onclick="joinRoom(9,'Audio')">Join</button></div>
+   <div class="room">12 Seats<br><button onclick="joinRoom(12,'Audio')">Join</button></div>
+  </div>
+ </div>
+
+ <div class="card" id="chat">
+  <h2>💬 Messages</h2>
+  <input placeholder="Write a message">
+  <button onclick="alert('Chat service will be connected soon!')">Send</button>
+ </div>
+
+ <div class="card">
+  <h2>🎁 Gifts & Coins</h2>
+  <p>Virtual gifts feature coming soon.</p>
+ </div>
+
+ <div class="card" id="profile">
+  <h2>👤 My Profile</h2>
+  <input placeholder="Enter your name">
+  <input placeholder="Write your bio">
+  <button onclick="alert('Profile setup coming soon!')">Save Profile</button>
+ </div>
+
+ <div class="card">
+  <h2>🛡️ Admin Panel</h2>
+  <p>Authorized administrator access will be configured securely.</p>
+ </div>
+</div>
+
+<footer>❤️ Love Romantic © 2026</footer>
+
+<script>
+function joinRoom(seats,type){
+ alert(type+' Room: '+seats+' seats selected. Live room connection will be added next.');
+}
+</script>
+
+</body>
+  </html>
+  
