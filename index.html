@@ -102,5 +102,27 @@ function makeRooms(type){
 document.getElementById('videoRooms').innerHTML=makeRooms('Video');
 document.getElementById('audioRooms').innerHTML=makeRooms('Audio');
 </script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/13.3.0/firebase-app.js";
+  import { getAuth } from "https://www.gstatic.com/firebasejs/13.3.0/firebase-auth.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/13.3.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBLnErJmut6WzoiZ4tjpnqqhleR-KvlRD8",
+    authDomain: "love-romantic-e213a.firebaseapp.com",
+    projectId: "love-romantic-e213a",
+    storageBucket: "love-romantic-e213a.firebasestorage.app",
+    messagingSenderId: "1040484276601",
+    appId: "1:1040484276601:web:f449614804e9f78205f7a8",
+    measurementId: "G-DDQ3B0TVJ3"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  console.log("Love Romantic Firebase Connected ❤️");
+</script>
+
 </body>
 </html>
