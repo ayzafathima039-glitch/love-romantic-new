@@ -1,13 +1,101 @@
-{
-"background_color": "#160c24",
-"dir": "ltr",
-"display": "standalone",
-"name": "Love Romantic",
-"orientation": "any",
-"scope": "/",
-"short_name": "Love Romantic",
-"start_url": "/",
-"theme_color": "#ed3997",
-"id": "Love Romantic",
-"description": "Love Romantic - Make Friends, Share Love, Enjoy Together"
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#160c24">
+<link rel="manifest" href="manifest.json">
+<title>Love Romantic ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#160c24;color:white;font-family:Arial,sans-serif}
+header{background:#29123d;padding:20px;text-align:center}
+header h2{color:#ff65b5;margin:0}
+nav{display:flex;justify-content:space-around;background:#351747;padding:14px 4px;position:sticky;top:0}
+nav a{color:white;text-decoration:none;font-size:12px}
+main{padding:16px}
+.welcome{text-align:center;padding:28px 12px;background:linear-gradient(135deg,#55205e,#a52e79);border-radius:18px}
+h2{color:#ff78bd}
+.card{background:#29183b;padding:18px;border-radius:15px;margin:15px 0;border:1px solid #60345f}
+button{background:#ed3997;color:white;border:0;padding:12px 20px;border-radius:25px;font-weight:bold;margin:5px}
+button:active{transform:scale(.96)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.room{background:#40204e;padding:15px;border-radius:12px;text-align:center}
+footer{text-align:center;padding:25px;color:#c9a6d0}
+</style>
+</head>
+<body>
+<header>
+<h2>❤️ LOVE ROMANTIC ❤️</h2>
+<p>Make Friends • Share Love • Enjoy Together</p>
+</header>
+
+<nav>
+<a href="#home">🏠 Home</a>
+<a href="#live">🔴 Live</a>
+<a href="#video">📹 Video</a>
+<a href="#audio">🎙️ Audio</a>
+<a href="#profile">👤 Profile</a>
+</nav>
+
+<main>
+<section id="home" class="welcome">
+<h1>Welcome to Love Romantic ❤️</h1>
+<p>Meet New Friends • Share Happiness • Enjoy Together</p>
+<button onclick="showMessage('Welcome to Love Romantic ❤️')">Get Started</button>
+</section>
+
+<section id="live" class="card">
+<h2>🔴 Live Video</h2>
+<p>Watch live broadcasts and connect with people.</p>
+<button onclick="showMessage('Live streaming setup coming soon!')">Watch Live</button>
+<button onclick="showMessage('Live broadcasting setup coming soon!')">Go Live</button>
+</section>
+
+<section id="video" class="card">
+<h2>📹 Video Rooms</h2>
+<p>Choose your room size.</p>
+<div class="grid">
+<div class="room">4 Seats<br><button onclick="joinRoom(4)">Join</button></div>
+<div class="room">6 Seats<br><button onclick="joinRoom(6)">Join</button></div>
+<div class="room">9 Seats<br><button onclick="joinRoom(9)">Join</button></div>
+<div class="room">12 Seats<br><button onclick="joinRoom(12)">Join</button></div>
+</div>
+</section>
+
+<section id="audio" class="card">
+<h2>🎙️ Audio Rooms</h2>
+<p>Talk and enjoy with friends.</p>
+<button onclick="showMessage('Audio room setup coming soon!')">Join Audio Room</button>
+</section>
+
+<section class="card">
+<h2>💬 Friends & Chat</h2>
+<p>Connect and chat with your friends.</p>
+<button onclick="showMessage('Chat feature requires Firebase setup.')">Open Chat</button>
+</section>
+
+<section id="profile" class="card">
+<h2>👤 My Profile</h2>
+<p>Welcome to your profile.</p>
+<button onclick="showMessage('Profile registration setup coming soon!')">Create Profile</button>
+</section>
+</main>
+
+<footer>
+❤️ Love Romantic ❤️<br>
+Make Friends • Share Love
+</footer>
+
+<script>
+function showMessage(message){
+alert(message);
 }
+function joinRoom(seats){
+alert(seats+' Seat Room selected. Video room service needs to be connected.');
+}
+</script>
+</body>
+</html>
